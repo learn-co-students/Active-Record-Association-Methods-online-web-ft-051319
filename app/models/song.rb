@@ -7,11 +7,9 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    if Artist.find_by(name: "Drake")
-      Artist.find_by(name: "Drake").songs << self
-    else 
-      drake = Artist.new(name: "Drake")
-      drake.songs << self
-    end
+    
+     Artist.new(name: "Drake")
+      
+    
   end
 end
